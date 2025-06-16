@@ -63,6 +63,8 @@
       display: inline-block;
       transition: background-color 0.3s;
       margin-right: 10px;
+      border: none;
+      cursor: pointer;
     }
     .btn:hover {
       background-color: var(--dark-blue);
@@ -90,6 +92,18 @@
         'event_label': action
       });
     }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      gtag('event', 'submit_contact', {
+        'event_category': 'form',
+        'event_label': 'Contact Form'
+      });
+
+      alert('Submitted');
+      event.target.reset();
+    }
   </script>
 </head>
 
@@ -112,7 +126,7 @@
 
   <div class="container">
     <h2>Contact Us</h2>
-    <form onsubmit="event.preventDefault(); this.reset(); alert('Submitted'); trackEvent('submit_contact');">
+    <form onsubmit="handleSubmit(event)">
       <label>Your name:<br><input type="text" name="name" required></label><br><br>
       <label>Your email:<br><input type="email" name="email" required></label><br><br>
       <label>Subject:<br><input type="text" name="subject" required></label><br><br>
