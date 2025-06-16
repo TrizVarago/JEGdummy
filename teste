@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GA4 Test Event</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW5PZYGPLE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EW5PZYGPLE');
+
+    // Evento disparado automaticamente ao carregar a página
+    window.addEventListener('load', () => {
+      gtag('event', 'test_event', {
+        'event_category': 'test',
+        'event_label': 'page_load'
+      });
+      console.log('Evento test_event enviado');
+    });
+  </script>
+</head>
+
+<body>
+  <h1>Teste de Evento GA4</h1>
+  <p>Abra o DebugView ou o Relatório em Tempo Real para conferir se o evento <strong>test_event</strong> chegou.</p>
+</body>
+</html>
