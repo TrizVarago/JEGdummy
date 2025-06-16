@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JEG Dummy</title>
+  <style>
+    :root {
+      --main-blue: #2F5DAB;
+      --light-gray: #f4f4f4;
+      --white: #ffffff;
+      --dark-blue: #244a85;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-gray);
+    }
+    header {
+      background-color: var(--main-blue);
+      color: var(--white);
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: var(--dark-blue);
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+    nav ul li a:hover {
+      background-color: var(--main-blue);
+      border-radius: 4px;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background-color: var(--main-blue);
+      color: var(--white);
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      transition: background-color 0.3s;
+      margin-right: 10px;
+    }
+    .btn:hover {
+      background-color: var(--dark-blue);
+    }
+    footer {
+      background-color: var(--main-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW5PZYGPLE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-EW5PZYGPLE');
+
+    function trackEvent(action) {{
+      gtag('event', action, {{
+        'event_category': 'button',
+        'event_label': action
+      }});
+    }}
+  </script>
+</head>
+<body>
+  <header>
+    <h1>JEG Dummy</h1>
+    <p>Lorem Ipsum Dolor</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/index.html" onclick="trackEvent('navigate_home')">Home</a></li>
+      <li><a href="/about-us/" onclick="trackEvent('navigate_about')">About Us</a></li>
+      <li><a href="/confederations/" onclick="trackEvent('navigate_members')">Our Members</a></li>
+      <li><a href="/contacts/" onclick="trackEvent('navigate_contact')">Contacts</a></li>
+      <li><a href="/recruitment/" onclick="trackEvent('navigate_recruitment')">Recruitment</a></li>
+      <li><a href="/found-a-je/" onclick="trackEvent('navigate_foundaje')">Found a JE</a></li>
+    </ul>
+  </nav>
+
+<div class="container">
+  <h2>Contact Us</h2>
+  <form onsubmit="event.preventDefault(); this.reset(); alert('Submitted'); trackEvent('submit_contact');">
+    <label>Your name:<br><input type="text" name="name" required></label><br><br>
+    <label>Your email:<br><input type="email" name="email" required></label><br><br>
+    <label>Subject:<br><input type="text" name="subject" required></label><br><br>
+    <label>Your message (optional):<br><textarea name="message"></textarea></label><br><br>
+    <label>Your whatsapp (optional):<br><input type="text" name="whatsapp"></label><br><br>
+    <label>Your LinkedIn (optional):<br><input type="text" name="linkedin"></label><br><br>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
+
+  <footer>
+    <p>© 2025 JEG Dummy - All rights reserved.</p>
+  </footer>
+</body>
+</html>
