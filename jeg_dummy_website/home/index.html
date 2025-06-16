@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JE Global Dummy</title>
+  <style>
+    :root {
+      --main-blue: #2F5DAB;
+      --light-gray: #f4f4f4;
+      --white: #ffffff;
+      --dark-blue: #244a85;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-gray);
+    }
+    header {
+      background-color: var(--main-blue);
+      color: var(--white);
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: var(--dark-blue);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+    nav ul li a.btn {
+      background-color: var(--main-blue);
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a.btn:hover {
+      background-color: var(--dark-blue);
+    }
+    nav ul li a:hover:not(.btn) {
+      background-color: var(--main-blue);
+      border-radius: 4px;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    footer {
+      background-color: var(--main-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW5PZYGPLE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EW5PZYGPLE');
+
+    function trackEvent(action) {
+      gtag('event', action, {
+        'event_category': 'button',
+        'event_label': action
+      });
+    }
+  </script>
+</head>
+<body>
+  <header><h1>JEG Dummy</h1></header>
+  <nav>
+    <ul>
+      <li><a href="../home/" onclick="trackEvent('navigate_home')">Home</a></li>
+      <li><a href="../about-us/" onclick="trackEvent('navigate_about')">About Us</a></li>
+      <li><a href="../confederations/" onclick="trackEvent('navigate_members')">Our Members</a></li>
+      <li><a href="../contacts/" onclick="trackEvent('navigate_contacts')">Contacts</a></li>
+      <li><a href="../recruitment/" onclick="trackEvent('navigate_recruitment')">Recruitment</a></li>
+      <li><a href="../found-a-je/" class="btn" onclick="trackEvent('click_found_a_je')">Found a JE</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Welcome to JE Global Dummy Homepage</h2>
+  </div>
+  <footer>© 2025 JEG Dummy - All rights reserved.</footer>
+</body>
+</html>
