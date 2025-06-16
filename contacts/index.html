@@ -87,19 +87,27 @@
     gtag('config', 'G-EW5PZYGPLE');
 
     function trackEvent(action) {
-      gtag('event', action, {
-        'event_category': 'button',
-        'event_label': action
-      });
+      if (typeof gtag === "function") {
+        gtag('event', action, {
+          'event_category': 'button',
+          'event_label': action
+        });
+      } else {
+        console.warn("gtag não está definido ainda");
+      }
     }
 
     function handleSubmit(event) {
       event.preventDefault();
 
-      gtag('event', 'submit_contact', {
-        'event_category': 'form',
-        'event_label': 'Contact Form'
-      });
+      if (typeof gtag === "function") {
+        gtag('event', 'submit_contact', {
+          'event_category': 'form',
+          'event_label': 'Contact Form'
+        });
+      } else {
+        console.warn("gtag não está definido ainda");
+      }
 
       alert('Submitted');
       event.target.reset();
