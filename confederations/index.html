@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JEG Dummy - Our Members</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JEG Dummy - Contacts</title>
   <base href="/JEGdummy/">
+
   <style>
     :root {
       --main-blue: #2F5DAB;
@@ -53,6 +54,19 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    .btn {
+      background-color: var(--main-blue);
+      color: var(--white);
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      transition: background-color 0.3s;
+      margin-right: 10px;
+    }
+    .btn:hover {
+      background-color: var(--dark-blue);
+    }
     footer {
       background-color: var(--main-blue);
       color: var(--white);
@@ -61,6 +75,8 @@
       margin-top: 20px;
     }
   </style>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW5PZYGPLE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -76,6 +92,7 @@
     }
   </script>
 </head>
+
 <body>
   <header>
     <h1>JEG Dummy</h1>
@@ -84,18 +101,26 @@
 
   <nav>
     <ul>
-      <li><a href="/JEGdummy/" onclick="trackEvent('navigate_home'); return true;">Home</a></li>
-      <li><a href="/JEGdummy/about-us/" onclick="trackEvent('navigate_about')">About Us</a></li>
-      <li><a href="/JEGdummy/confederations/" onclick="trackEvent('navigate_members')">Our Members</a></li>
-      <li><a href="/JEGdummy/contacts/" onclick="trackEvent('navigate_contact')">Contacts</a></li>
-      <li><a href="/JEGdummy/recruitment/" onclick="trackEvent('navigate_recruitment')">Recruitment</a></li>
-      <li><a href="/JEGdummy/found-a-je/" onclick="trackEvent('navigate_foundaje')">Found a JE</a></li>
+      <li><a href="./" onclick="trackEvent('navigate_home')">Home</a></li>
+      <li><a href="about-us/" onclick="trackEvent('navigate_about')">About Us</a></li>
+      <li><a href="confederations/" onclick="trackEvent('navigate_members')">Our Members</a></li>
+      <li><a href="contacts/" onclick="trackEvent('navigate_contact')">Contacts</a></li>
+      <li><a href="recruitment/" onclick="trackEvent('navigate_recruitment')">Recruitment</a></li>
+      <li><a href="found-a-je/" onclick="trackEvent('navigate_foundaje')">Found a JE</a></li>
     </ul>
   </nav>
 
   <div class="container">
-    <h2>Our Members</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); this.reset(); alert('Submitted'); trackEvent('submit_contact');">
+      <label>Your name:<br><input type="text" name="name" required></label><br><br>
+      <label>Your email:<br><input type="email" name="email" required></label><br><br>
+      <label>Subject:<br><input type="text" name="subject" required></label><br><br>
+      <label>Your message (optional):<br><textarea name="message"></textarea></label><br><br>
+      <label>Your WhatsApp (optional):<br><input type="text" name="whatsapp"></label><br><br>
+      <label>Your LinkedIn (optional):<br><input type="text" name="linkedin"></label><br><br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
   </div>
 
   <footer>
