@@ -93,9 +93,10 @@
     <h1>JEG Dummy</h1>
     <p>Lorem Ipsum Dolor</p>
   </header>
+
   <nav>
     <ul>
-      <li><a href="/JEGdummy/index.html" onclick="trackEvent('navigate_home')">Home</a></li>
+      <li><a href="/JEGdummy/" onclick="trackEvent('navigate_home')">Home</a></li>
       <li><a href="/JEGdummy/about-us/" onclick="trackEvent('navigate_about')">About Us</a></li>
       <li><a href="/JEGdummy/confederations/" onclick="trackEvent('navigate_members')">Our Members</a></li>
       <li><a href="/JEGdummy/contacts/" onclick="trackEvent('navigate_contact')">Contacts</a></li>
@@ -104,21 +105,22 @@
     </ul>
   </nav>
 
-<div class="container">
-  <h2>Contact Us</h2>
-  <form onsubmit="event.preventDefault(); this.reset(); alert('Submitted'); trackEvent('submit_contact');">
-    <label>Your name:<br><input type="text" name="name" required></label><br><br>
-    <label>Your email:<br><input type="email" name="email" required></label><br><br>
-    <label>Subject:<br><input type="text" name="subject" required></label><br><br>
-    <label>Your message (optional):<br><textarea name="message"></textarea></label><br><br>
-    <label>Your whatsapp (optional):<br><input type="text" name="whatsapp"></label><br><br>
-    <label>Your LinkedIn (optional):<br><input type="text" name="linkedin"></label><br><br>
-    <button type="submit" class="btn">Submit</button>
-  </form>
-</div>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); this.reset(); alert('Submitted'); trackEvent('submit_contact');">
+      <label>Your name:<br><input type="text" name="name" required></label><br><br>
+      <label>Your email:<br><input type="email" name="email" required></label><br><br>
+      <label>Subject:<br><input type="text" name="subject" required></label><br><br>
+      <label>Your message (optional):<br><textarea name="message"></textarea></label><br><br>
+      <label>Your whatsapp (optional):<br><input type="text" name="whatsapp"></label><br><br>
+      <label>Your LinkedIn (optional):<br><input type="text" name="linkedin"></label><br><br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
 
   <footer>
     <p>© 2025 JEG Dummy - All rights reserved.</p>
   </footer>
 </body>
 </html>
+
