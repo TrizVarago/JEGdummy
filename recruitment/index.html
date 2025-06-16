@@ -52,6 +52,18 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    .btn {
+      background-color: var(--main-blue);
+      color: var(--white);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: var(--dark-blue);
+    }
     footer {
       background-color: var(--main-blue);
       color: var(--white);
@@ -95,6 +107,13 @@
   <div class="container">
     <h2>Recruitment</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <form onsubmit="event.preventDefault(); this.reset(); alert('Submitted'); gtag('event', 'form_submit', { 'form_id': 'recruitment_form', 'form_name': 'Recruitment Form' });">
+      <label>Your name:<br><input type="text" name="name" required></label><br><br>
+      <label>Your email:<br><input type="email" name="email" required></label><br><br>
+      <label>Position applying for:<br><input type="text" name="position" required></label><br><br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
   </div>
 
   <footer>
