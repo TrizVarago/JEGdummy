@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JEG Dummy - About Us</title>
+  <title>JEG Dummy</title>
   <style>
     :root {
       --main-blue: #2F5DAB;
@@ -76,16 +77,16 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW5PZYGPLE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
     gtag('config', 'G-EW5PZYGPLE');
 
-    function trackEvent(action) {
-      gtag('event', action, {
+    function trackEvent(action) {{
+      gtag('event', action, {{
         'event_category': 'button',
         'event_label': action
-      });
-    }
+      }});
+    }}
   </script>
 </head>
 <body>
@@ -95,19 +96,19 @@
   </header>
   <nav>
     <ul>
-      <li><a href="../index.html" onclick="trackEvent('navigate_home')">Home</a></li>
-      <li><a href="../about-us/" onclick="trackEvent('navigate_about')">About Us</a></li>
-      <li><a href="../confederations/" onclick="trackEvent('navigate_members')">Our Members</a></li>
-      <li><a href="../contacts/" onclick="trackEvent('navigate_contact')">Contacts</a></li>
-      <li><a href="../recruitment/" onclick="trackEvent('navigate_recruitment')">Recruitment</a></li>
-      <li><a href="../found-a-je/" onclick="trackEvent('navigate_foundaje')">Found a JE</a></li>
+      <li><a href="/index.html" onclick="trackEvent('navigate_home')">Home</a></li>
+      <li><a href="/about-us/" onclick="trackEvent('navigate_about')">About Us</a></li>
+      <li><a href="/confederations/" onclick="trackEvent('navigate_members')">Our Members</a></li>
+      <li><a href="/contacts/" onclick="trackEvent('navigate_contact')">Contacts</a></li>
+      <li><a href="/recruitment/" onclick="trackEvent('navigate_recruitment')">Recruitment</a></li>
+      <li><a href="/found-a-je/" onclick="trackEvent('navigate_foundaje')">Found a JE</a></li>
     </ul>
   </nav>
 
-  <div class="container">
-    <h2>About Us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
+<div class="container">
+  <h2>About US</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
 
   <footer>
     <p>© 2025 JEG Dummy - All rights reserved.</p>
